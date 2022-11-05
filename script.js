@@ -1,7 +1,5 @@
 // أنشئ المصفوفة تحت هذا الكومنت
-let orders = [
-
-]
+let orders = []
 
 function addOrder() {
   let name = document.getElementById("name").value;
@@ -28,8 +26,14 @@ function load() {
   container.innerHTML = "";
   // طبّق الخطوة 6 تحت هذا الكومنت
 orders.forEach(item => {
-  container.innerHTML= `<div><h1>${item.name} - ${item.id}</h1><h3>${item.order}</h3></div>`
+  container.innerHTML+= `<div><h1>${item.name} - ${item.id}</h1><h3>${item.order}</h3></div>`
 });
+}
+
+function remove () {
+   orders.pop()
+   load()
+   
 }
 
 
